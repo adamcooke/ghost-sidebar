@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel='stylesheet' type='text/css'>
+        
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+  {{#if @blog.cover}}<div class='header-cover' style="background-image: url({{@blog.cover}})"></div>{{/if}}
+  
+  <header class='main' >
+    <div class='wrap'>
+      {{#if @blog.logo}}<div class='logo'><a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a></div>{{/if}}
+      <h1><a href='/'>{{@blog.title}}</a></h1>
+      <p class='title'>{{@blog.description}}</p>
+    </div>
+  </header>
+  
+  <section class='content'>
+    {{{body}}}
+  </section>
+  
+</body>
+</html>
